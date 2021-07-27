@@ -3,14 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoMaterialModule } from './material-module';
+import { ToolBarCompComponent } from './tool-bar-comp/tool-bar-comp.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolBarCompComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,DemoMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
