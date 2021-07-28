@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './material-module';
@@ -20,7 +21,7 @@ import { LoginCardComponent } from './login-card/login-card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,DemoMaterialModule
+    BrowserAnimationsModule,DemoMaterialModule,FormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

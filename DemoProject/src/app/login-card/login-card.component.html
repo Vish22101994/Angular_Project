@@ -1,29 +1,30 @@
 
 
-  <mat-card class = "loginCard">
+  <p *ngIf = "!isLoggedIn">{{data.name}}</p>
+  <mat-card *ngIf = "isLoggedIn" class = "loginCard">
     <mat-card-title>Login</mat-card-title>
     
 
 <mat-divider style ="margin-bottom: 5px;" [inset]="true"></mat-divider>
-<form>
+<form #formRef = "ngForm" (ngSubmit) = "validate()">
 <mat-card-content>
   
     <mat-form-field appearance="outline">
       <mat-label>Username</mat-label>
-      <input matInput placeholder="Enter Your Username" type="text">
+      <input matInput placeholder="Enter Your Username" type="text" [(ngModel)] = "userName" name = "userName" #inp1 = "ngModel">
       <mat-icon matSuffix>account_circle</mat-icon>
       <mat-hint>Hint</mat-hint>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput placeholder="Enter Your Password" type="password">
+      <input matInput placeholder="Enter Your Password" type="password" [(ngModel)] = "password" name= "password" >
       <mat-icon matSuffix>lock</mat-icon>
       <mat-hint>Hint</mat-hint>
     </mat-form-field>
 </mat-card-content>
 <mat-card-actions style="text-align: center;">
-  <button class="btn btn-primary" type="button" (click) = "isClicked = true">
-  <span *ngIf = "false" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  <button class="btn btn-primary" type="submit">
+  <span *ngIf = "isClicked" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
   {{isClicked ? buttonLabel : "Sign In"}}
   </button>
 </mat-card-actions>
