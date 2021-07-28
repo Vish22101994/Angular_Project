@@ -26,7 +26,14 @@ export class LoginCardComponent implements OnInit {
       console.log(data);
       
     });
-    
+    this.registerNewUser();
+  };
+
+  registerNewUser() {
+    let userData = {username: "Piggu03", password: "bulbul"};
+    this.credService.registerUser(userData).subscribe(data => {
+      console.log("Added");
+    });
   }
 
 }
