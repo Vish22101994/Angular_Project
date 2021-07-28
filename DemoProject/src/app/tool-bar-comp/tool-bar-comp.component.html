@@ -5,9 +5,12 @@
 
  <span class = "logoC">AV : Create Angular Project</span>
  <span class="example-spacer"></span>
- <button mat-stroked-button color="accent">SignIn</button>
- <span class = "example-spacer-10px"></span>
  <button mat-stroked-button color="accent">SignUp</button>
 </mat-toolbar>
 
-<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<mat-progress-bar
+          [color]="color"
+          [mode]="mode"
+          [value]="value"
+          [bufferValue]="bufferValue">
+      </mat-progress-bar>

@@ -1,0 +1,11 @@
+
+<mat-selection-list class= "listS" #selectList [multiple] = "false">
+  <div *ngFor = "let i of menuList; let icn = index">
+   <mat-list-option class= "listAlign" [value] = "i">
+    <mat-icon mat-list-icon>{{menuIconList[icn]}}</mat-icon>
+    {{i}}
+  </mat-list-option></div>
+</mat-selection-list>
+
+
+

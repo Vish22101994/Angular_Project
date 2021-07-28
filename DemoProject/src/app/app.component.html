@@ -1,23 +1,20 @@
 <mat-drawer-container class="example-container" autosize>
+
+  
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <mat-card>
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Piggu M</mat-card-title>
-        <mat-card-subtitle>Pig Breed</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-actions style= "padding: 0px;">
-        <button mat-button>Edit Profile</button>
-        <button mat-button>Log Out</button>
-      </mat-card-actions>
-    </mat-card>
-    
+    <app-user-card-m></app-user-card-m>
+    <app-side-menu-comp></app-side-menu-comp>
   </mat-drawer>
 
   <div class="example-sidenav-content">
-    <app-tool-bar-comp [drawer] = "drawer"></app-tool-bar-comp>
+    <div class = "toolBarFix">
+      <app-tool-bar-comp [drawer] = "drawer"></app-tool-bar-comp>
+    </div>
+   
+    <div class= "loginCarDC">
+      <app-login-card></app-login-card>
+    </div>
   </div>
-
 </mat-drawer-container>
 
 <!-- <p>

@@ -1,0 +1,33 @@
+
+
+  <mat-card class = "loginCard">
+    <mat-card-title>Login</mat-card-title>
+    
+
+<mat-divider style ="margin-bottom: 5px;" [inset]="true"></mat-divider>
+<form>
+<mat-card-content>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Enter Your Username" type="text">
+      <mat-icon matSuffix>account_circle</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Enter Your Password" type="password">
+      <mat-icon matSuffix>lock</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+</mat-card-content>
+<mat-card-actions style="text-align: center;">
+  <button class="btn btn-primary" type="button" (click) = "isClicked = true">
+  <span *ngIf = "false" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  {{isClicked ? buttonLabel : "Sign In"}}
+  </button>
+</mat-card-actions>
+</form>
+<mat-card-footer><span style="color: rgb(128, 166, 236); margin-left: 80px; font-size: smaller;">Don’t have an account with us?    <a href="#">Register Here</a></span></mat-card-footer>
+  </mat-card>
+  

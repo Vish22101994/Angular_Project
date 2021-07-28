@@ -1,0 +1,17 @@
+
+.loginCard {
+  width: 400px;
+}
+
+.mat-form-field  {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.mat-card-actions {
+  margin-bottom: 2px;
+}
+
+.mat-card-actions, .mat-card-subtitle, .mat-card-content {
+  margin-bottom: 0;
+}
