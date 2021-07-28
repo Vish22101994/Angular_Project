@@ -11,6 +11,8 @@ export class ToolBarCompComponent implements OnInit {
   @Input()
   drawer:any;
 
+  @Input()
+  isDisabled:boolean = true;
   color: ThemePalette = 'primary';
   mode: ProgressBarMode = 'determinate';
   value = 100;

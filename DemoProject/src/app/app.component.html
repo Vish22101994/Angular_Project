@@ -1,4 +1,4 @@
-<!-- <mat-drawer-container class="example-container" autosize>
+<mat-drawer-container class="example-container" autosize>
 
   
   <mat-drawer #drawer class="example-sidenav" mode="side">
@@ -8,13 +8,14 @@
 
   <div class="example-sidenav-content">
     <div class = "toolBarFix">
-      <app-tool-bar-comp [drawer] = "drawer"></app-tool-bar-comp>
+      <app-tool-bar-comp [isDisabled] = "isLoggedIn" [drawer] = "drawer"></app-tool-bar-comp>
     </div>
    
     <div class= "loginCarDC">
-      <app-login-card></app-login-card>
+      <!-- <app-login-card *ngIf = "isRegistered" (hideLoginCard) = "hideLoginCard($event)"></app-login-card> -->
+      <router-outlet (hideLoginCard) = "hideLoginCard($event)"></router-outlet>
     </div>
   </div>
-</mat-drawer-container> -->
-<app-register-card></app-register-card>
+</mat-drawer-container>
+
 

@@ -12,12 +12,12 @@ export class RegisterCardComponent implements OnInit {
   userName:string = "";
   cPassword:string ="";
   password:string = "";
+  
   constructor(private credService:LoginCredsService) { }
 
   ngOnInit(): void {
   }
 
-  
   registerNewUser() {
     this.isClicked = true;
     if(this.password == this.cPassword) {

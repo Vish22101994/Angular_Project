@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit,Output } from '@angular/core';
 import { LoginCredsService } from '../login-creds.service';
 
 @Component({
@@ -7,6 +7,10 @@ import { LoginCredsService } from '../login-creds.service';
   styleUrls: ['./login-card.component.css']
 })
 export class LoginCardComponent implements OnInit {
+
+  @Output()
+  hideLoginCard:EventEmitter<boolean> = new EventEmitter<boolean>();
+
   buttonLabel:string = "Signing...";
   isClicked:boolean = false;
   userName:string = "";
@@ -18,7 +22,10 @@ export class LoginCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  hideEvent() {
+    this.hideLoginCard.emit(false);
+    
+  }
 
   registerNewUser() {
     let userData = {username: "Piggu03", password: "bulbul"};
@@ -33,7 +40,8 @@ export class LoginCardComponent implements OnInit {
       if(data[0].password == this.password) {
         setTimeout(() => {this.isClicked = false ; this.isLoggedIn = true; }, 2000);
       }
-      this.activeUser = data;    
+      this.activeUser = data;  
+      this.hideEvent();  
     });
   }
 
