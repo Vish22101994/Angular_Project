@@ -1,12 +1,12 @@
 
 
-  <p *ngIf = "!isLoggedIn">{{data.name}}</p>
-  <mat-card *ngIf = "isLoggedIn" class = "loginCard">
+  <p *ngIf = "isLoggedIn">{{activeUser[0].username}}</p>
+  <mat-card *ngIf = "!isLoggedIn" class = "loginCard">
     <mat-card-title>Login</mat-card-title>
     
 
 <mat-divider style ="margin-bottom: 5px;" [inset]="true"></mat-divider>
-<form #formRef = "ngForm" (ngSubmit) = "validate()">
+<form #formRef = "ngForm" (ngSubmit) = "loginCreds()">
 <mat-card-content>
   
     <mat-form-field appearance="outline">
