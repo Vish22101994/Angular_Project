@@ -21,18 +21,24 @@ export class LoginCardComponent implements OnInit {
   validate() {
     this.isClicked = true;
     setTimeout(() => {this.isClicked = false ; this.isLoggedIn = false; }, 2000);
-    this.credService.getUser().subscribe((data) => {
-      this.data = data;
-      console.log(data);
+    // this.credService.getUser().subscribe((data) => {
+    //   this.data = data;
+    //   console.log(data);
       
-    });
-    this.registerNewUser();
+    // });
+    this.loginCreds();
   };
 
   registerNewUser() {
     let userData = {username: "Piggu03", password: "bulbul"};
     this.credService.registerUser(userData).subscribe(data => {
       console.log("Added");
+    });
+  }
+
+  loginCreds(){
+    this.credService.getUserByuserName(this.userName).subscribe((data) => {
+      console.log(data);
     });
   }
 

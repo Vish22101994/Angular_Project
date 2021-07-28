@@ -18,4 +18,8 @@ export class LoginCredsService {
   registerUser(createUser:any){
     return this.http.post(this.URL1, createUser);
   }
+
+  getUserByuserName(username:string):Observable<any> {
+    return this.http.get<any>(this.URL1+"/"+username)
+  }
 }
