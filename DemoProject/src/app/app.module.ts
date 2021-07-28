@@ -10,13 +10,15 @@ import { ToolBarCompComponent } from './tool-bar-comp/tool-bar-comp.component';
 import { SideMenuCompComponent } from './side-menu-comp/side-menu-comp.component';
 import { UserCardMComponent } from './user-card-m/user-card-m.component';
 import { LoginCardComponent } from './login-card/login-card.component';
+import { RegisterCardComponent } from './register-card/register-card.component';
 @NgModule({
   declarations: [
     AppComponent,
     ToolBarCompComponent,
     SideMenuCompComponent,
     UserCardMComponent,
-    LoginCardComponent
+    LoginCardComponent,
+    RegisterCardComponent
   ],
   imports: [
     BrowserModule,
