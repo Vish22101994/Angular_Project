@@ -1,11 +1,11 @@
 <mat-card>
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Piggu M</mat-card-title>
-    <mat-card-subtitle>Pig Breed</mat-card-subtitle>
+    <mat-card-title>{{userName}}</mat-card-title>
+    <mat-card-subtitle>Employee</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions style= "padding: 0px;">
     <button mat-button>Edit Profile</button>
-    <button mat-button>Log Out</button>
+    <button mat-button (click) = "signOut()">Log Out</button>
   </mat-card-actions>
 </mat-card>

@@ -11,6 +11,7 @@ import { SideMenuCompComponent } from './side-menu-comp/side-menu-comp.component
 import { UserCardMComponent } from './user-card-m/user-card-m.component';
 import { LoginCardComponent } from './login-card/login-card.component';
 import { RegisterCardComponent } from './register-card/register-card.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { RegisterCardComponent } from './register-card/register-card.component';
     SideMenuCompComponent,
     UserCardMComponent,
     LoginCardComponent,
-    RegisterCardComponent
+    RegisterCardComponent,
+    HomeComponentComponent
   ],
   imports: [
     BrowserModule,

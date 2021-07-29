@@ -13,6 +13,15 @@
   width: 10px;
 }
 
+.welcome-mssg {
+  font-size: small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+.welcome-mssg span {
+  display: block;
+}
 
 button a {
   text-decoration: none;
