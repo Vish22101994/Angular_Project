@@ -7,6 +7,7 @@ import { User } from '../user';
   templateUrl: './user-card-m.component.html',
   styleUrls: ['./user-card-m.component.css']
 })
+
 export class UserCardMComponent implements OnInit {
 
   userName:string = "";

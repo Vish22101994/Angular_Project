@@ -13,9 +13,9 @@
   <span style="text-align: end; font-size: smaller;">{{currentDate | date: 'fullDate'}}</span>
   <span > {{welcomeMssg}}</span>
  </div>
-    <button *ngIf = "!isLoggedIn" mat-stroked-button color="accent"><a [routerLink] = "['/userLogin']">Login In</a></button>
+ <a [routerLink] = "['/userLogin']"><button *ngIf = "!isLoggedIn" mat-stroked-button color="accent">Login In</button></a>
     <span class = "gap-10px"></span>
-    <button *ngIf = "!isLoggedIn" mat-stroked-button color="accent"><a [routerLink] = "['/userRegister']">Sign Up</a></button>
+    <a [routerLink] = "['/userRegister']"><button *ngIf = "!isLoggedIn" mat-stroked-button color="accent">Sign Up</button></a>
 
 </mat-toolbar>
 

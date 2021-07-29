@@ -12,6 +12,7 @@ import { UserCardMComponent } from './user-card-m/user-card-m.component';
 import { LoginCardComponent } from './login-card/login-card.component';
 import { RegisterCardComponent } from './register-card/register-card.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { Feature01Component } from './feature01/feature01.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { HomeComponentComponent } from './home-component/home-component.componen
     UserCardMComponent,
     LoginCardComponent,
     RegisterCardComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    Feature01Component
   ],
   imports: [
     BrowserModule,
