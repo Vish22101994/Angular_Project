@@ -24,17 +24,18 @@ export class ToolBarCompComponent implements OnInit {
   constructor(private userState:UserStateService) {  }
 
   ngOnInit(): void {
+    
+   // toggling drawer button  based on isToggle:boolean state
     this.userState.user$.subscribe(res => {
       if(res.isToggle == true) {
         this.drawer.toggle();
       }
     });
+ 
+    // After Login :  remove sign in / sign up button And displaying welcome mssg
     this.userState.user$.subscribe(res => {
-        this.currentDate =  new Date();
         this.isLoggedIn = res.isLoggedIn;
-        if(res.isLoggedIn) {
-          this.welcomeMssg = res.usernName + " : Welcome to Angular Project App";  
-        }
+        this.welcomeMssg = res.usernName + " : Welcome to Angular Project App";  
     });
   }
 

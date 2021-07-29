@@ -30,7 +30,7 @@ export class LoginCardComponent implements OnInit {
         setTimeout(() => {this.isClicked = false ; this.isLoggedIn = true; }, 100);
       }
       this.activeUser = data;
-      this.userState.changeUserState(new User(data[0].username,true,false));   
+      this.userState.changeUserState(new User(data[0].username,true,true));   
     });
   }
 

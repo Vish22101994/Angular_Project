@@ -24,6 +24,7 @@ export class UserCardMComponent implements OnInit {
 
 
   signOut() {
+    //navgating to the home page and sign out logic (using .navigate() or .navigateByUrl())
     this.router.navigate(['/home']);
     this.service.changeUserState(new User('User' , false,true));
   }
