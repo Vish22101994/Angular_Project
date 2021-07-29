@@ -4,6 +4,7 @@ import { User } from '../user';
 import { UserStateService } from '../user-state.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import {TooltipPosition} from '@angular/material/tooltip';
 @Component({
   selector: 'app-login-card',
@@ -22,7 +23,7 @@ export class LoginCardComponent implements OnInit {
   password:string = "";
   activeUser:any;
   hide:boolean = true;
-  constructor(private credService:LoginCredsService,private userState:UserStateService,private _snackBar:MatSnackBar) { }
+  constructor(private router:Router,private credService:LoginCredsService,private userState:UserStateService,private _snackBar:MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +35,7 @@ export class LoginCardComponent implements OnInit {
     if(data.length != 0 && data[0].password == this.password){
         setTimeout(() => {this.isClicked = false ; this.isLoggedIn = true; }, 100);
         this.activeUser = data;
+        this.router.navigate(['/home']);
         this.userState.changeUserState(new User(data[0].username,true,true));
         this._snackBar.open("Succefully Logged In !!","close");
         setTimeout(() => this._snackBar.dismiss(),3000); 

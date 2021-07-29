@@ -18,8 +18,11 @@ export class HomeComponentComponent implements OnInit {
   ngOnInit(): void {
 
     this.service.user$.subscribe((res) => {
+      
       if(res.isLoggedIn == true) {
         this.isEnabled = true;
+      } else {
+        this.isEnabled = false;
       }
     });
   }
