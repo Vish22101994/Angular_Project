@@ -13,6 +13,7 @@ import { LoginCardComponent } from './login-card/login-card.component';
 import { RegisterCardComponent } from './register-card/register-card.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { Feature01Component } from './feature01/feature01.component';
+import { HomeSheetCompComponent } from './home-sheet-comp/home-sheet-comp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { Feature01Component } from './feature01/feature01.component';
     LoginCardComponent,
     RegisterCardComponent,
     HomeComponentComponent,
-    Feature01Component
+    Feature01Component,
+    HomeSheetCompComponent
   ],
   imports: [
     BrowserModule,
